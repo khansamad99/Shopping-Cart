@@ -6,6 +6,7 @@ import CartContainer from "./components/CartContainer";
 import cartItems from "./cart-items";
 // redux stuff
 
+
 function App() {
   // cart setup
 
