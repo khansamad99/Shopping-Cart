@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from "react-redux";
 
 const CartItem = ({ img, title, price, amount }) => {
   return (
@@ -30,4 +31,5 @@ const CartItem = ({ img, title, price, amount }) => {
   );
 };
 
-export default CartItem;
+
+export default CartItem

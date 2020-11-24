@@ -3,10 +3,11 @@ import {INCREASE,DECREASE} from './actions';
 
 const reducer = (state,action) =>  {
     switch(action.type){
-        CASE 'INCREASE':{
-            return {...state,count:state.count+1}
+        case 'INCREASE':
+            return [...state,state.amount+1];
+        default:
+            return state;
         }
-    }
 }
 
 
