@@ -3,8 +3,15 @@ import {INCREASE,DECREASE,CLEAR_CART,REMOVE,GET_TOTAL,GET_AMOUNT} from './action
 
 const reducer = (state,action) =>  {
     switch(action.type){
-        case INCREASE:
-            return [...state,state.amount+1];
+        case INCREASE:{
+                let temp = state.cart.map(cartItem => {
+                    if(cartItem.id === action.payload.id){
+                        cartItem = {...cartItem,amount:cartItem.amount+1}
+                    }
+                    return cartItem;
+                });
+                return {...state,cart:temp};
+        }
         case CLEAR_CART:
             return {...state,cart:[]};
         case REMOVE:
